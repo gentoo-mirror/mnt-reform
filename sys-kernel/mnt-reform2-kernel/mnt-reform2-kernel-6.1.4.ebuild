@@ -121,6 +121,7 @@ src_prepare() {
 		"${T}"/version.config
 		"${dist_conf_path}"/base.config
 		"${reform_conf_path}"
+		"${FILESDIR}"/config
 	)
 	use debug || merge_configs+=(
 		"${dist_conf_path}"/no-debug.config

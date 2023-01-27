@@ -68,6 +68,7 @@ src_prepare() {
 	local PATCHES=(
 		# meh, genpatches have no directory
 		"${WORKDIR}"/*.patch
+		"${WORKDIR}"/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/patches/*.patch
 	)
 	default
 

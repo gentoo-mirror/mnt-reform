@@ -1,0 +1,17 @@
+--- a/arch/arm64/Kconfig
++++ b/arch/arm64/Kconfig
+@@ -209,6 +209,14 @@
+ 	select HAVE_KPROBES
+ 	select HAVE_KRETPROBES
+ 	select HAVE_GENERIC_VDSO
++	select HAVE_KERNEL_BZIP2
++	select HAVE_KERNEL_GZIP
++	select HAVE_KERNEL_LZ4
++	select HAVE_KERNEL_LZMA
++	select HAVE_KERNEL_LZO
++	select HAVE_KERNEL_UNCOMPRESSED
++	select HAVE_KERNEL_XZ
++	select HAVE_KERNEL_ZSTD
+ 	select IRQ_DOMAIN
+ 	select IRQ_FORCED_THREADING
+ 	select KASAN_VMALLOC if KASAN

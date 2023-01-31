@@ -1,5 +1,3 @@
-**warning** The kernel compiles but as of right now, it does not boot! I will update the README as soon as all is well.
-
 A Gentoo repository / overlay for the [MNT reform 2 laptop](https://mntre.com/).
 
 You can find here an ebuild for a patched and correctly configured kernel, called `sys-kernel/mnt-reform2-kernel`.
@@ -14,3 +12,5 @@ Then, install the kernel like so:
 ```bash
 emerge --ask --verbose sys-kernel/mnt-reform2-kernel
 ```
+
+Note that the resulting `vmlinuz` file is gzip compressed and needs to be decompressed for the MNT patched u-boot to be able to load it.

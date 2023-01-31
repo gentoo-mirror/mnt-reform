@@ -12,5 +12,5 @@ emerge --sync mnt-reform2
 
 Then, install the kernel like so:
 ```bash
-emerge --ask --verbose emerge --sync mnt-reform2
+emerge --ask --verbose sys-kernel/mnt-reform2-kernel
 ```

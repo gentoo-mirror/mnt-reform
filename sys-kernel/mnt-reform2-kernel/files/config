@@ -1,9 +1,1 @@
 CONFIG_DRM_MXSFB=m
-
-# Reform u-boot only supports LZMA compressed images [1].  However, the image
-# of the Debian system image is uncompressed, so we are going to try the same
-# here.
-# 
-# [1] https://source.mnt.re/reform/reform-boundary-uboot/-/blob/4aa8680c4d2d71edb6556b9baa79510778bcbc2d/mntreform-config#L1319
-CONFIG_KERNEL_GZIP=n
-CONFIG_KERNEL_UNCOMPRESSED=y

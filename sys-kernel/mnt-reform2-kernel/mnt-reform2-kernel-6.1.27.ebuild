@@ -114,6 +114,7 @@ src_prepare() {
 
 	mv ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/freescale/imx8mq-mnt-reform2.dts{,.orig}
 	cp ${WORKDIR}/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/imx8mq-mnt-reform2.dts ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/freescale/imx8mq-mnt-reform2.dts
+	cp ${WORKDIR}/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/imx8mq-mnt-reform2-hdmi.dts ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/freescale/imx8mq-mnt-reform2-hdmi.dts
 
 	local myversion="-mnt-reform2"
 	use hardened && myversion+="-hardened"

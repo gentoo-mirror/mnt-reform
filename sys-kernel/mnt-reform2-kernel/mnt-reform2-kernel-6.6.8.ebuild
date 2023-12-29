@@ -76,7 +76,7 @@ src_prepare() {
 	local PATCHES=(
 		# meh, genpatches have no directory
 		"${WORKDIR}"/*.patch
-		"${WORKDIR}"/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/patches${MY_P%.*}/*.patch
+		"${WORKDIR}"/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/patches6.6/imx8mq-mnt-reform2/*.patch
 	)
 	default
 

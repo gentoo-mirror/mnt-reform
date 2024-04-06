@@ -4,7 +4,7 @@ You can find here an ebuild for a patched and correctly configured kernel, calle
 
 To add the repository to your system, run:
 ```bash
-eselect repository add mnt-reform2 git https://git.chaostreffbern.ch/vimja/mnt-reform2-overlay.git
+eselect repository add mnt-reform2 git https://source.mnt.re/vimja/mnt-reform-overlay.git
 emerge --sync mnt-reform2
 ```
 

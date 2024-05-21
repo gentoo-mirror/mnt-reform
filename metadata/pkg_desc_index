@@ -1,4 +1,4 @@
 sys-kernel/dracut-reform-hw-setup 0.0.3: Dracut module to run the reform-hw-setup script on MNT Reform laptops
-sys-kernel/mnt-reform2-kernel 6.1.4 6.1.8 6.1.12 6.1.20 6.1.27 6.4.7 6.6.8 6.6.15 6.6.16 6.7.9 6.7.12: Linux kernel built with Gentoo patches and patches for the MNT Reform 2 laptop.
+sys-kernel/mnt-reform2-kernel 6.1.4 6.1.8 6.1.12 6.1.20 6.1.27 6.4.7 6.6.8 6.6.15 6.6.16 6.7.9 6.7.12 6.8.8: Linux kernel built with Gentoo patches and patches for the MNT Reform 2 laptop.
 sys-power/reform2-lpc-module 0.0.1: MNT Reform 2 LPC driver
-virtual/dist-kernel 5.17.0 6.1.8 6.1.12 6.1.20 6.1.27 6.4.7 6.6.8 6.6.15 6.6.16 6.7.9 6.7.12: Virtual to depend on any Distribution Kernel
+virtual/dist-kernel 5.17.0 6.1.8 6.1.12 6.1.20 6.1.27 6.4.7 6.6.8 6.6.15 6.6.16 6.7.9 6.7.12 6.8.8: Virtual to depend on any Distribution Kernel

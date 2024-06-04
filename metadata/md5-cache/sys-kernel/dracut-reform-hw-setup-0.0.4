@@ -1,0 +1,14 @@
+DEFINED_PHASES=install unpack
+DEPEND=sys-kernel/dracut
+DESCRIPTION=Dracut module to run the reform-hw-setup script on MNT Reform laptops
+EAPI=7
+HOMEPAGE=https://source.mnt.re/vimja/dracut_reform-hw-setup
+INHERIT=toolchain-funcs
+IUSE=+mnt_reform_som_imx8mq mnt_reform_som_bpi-cm4 mnt_reform_som_ls1028a
+KEYWORDS=~arm64
+LICENSE=GPL-2
+RDEPEND=mnt_reform_som_imx8mq? ( media-sound/alsa-utils ) mnt_reform_som_bpi-cm4? ( media-sound/alsa-utils ) mnt_reform_som_ls1028a? ( <dev-libs/libgpiod-2.0.0 )
+SLOT=0
+SRC_URI=https://source.mnt.re/vimja/dracut_reform-hw-setup/-/archive/v0.0.4/dracut-reform-hw-setup-v0.0.4.tar.gz -> dracut-reform-hw-setup-0.0.4.tar.gz
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0
+_md5_=f7227659f857329bfa6d4f9e7570eebb

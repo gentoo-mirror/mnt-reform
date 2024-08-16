@@ -1,0 +1,19 @@
+--- a/drivers/gpu/drm/panel/panel-jdi-lt070me05000.c
++++ b/drivers/gpu/drm/panel/panel-jdi-lt070me05000.c
+@@ -254,8 +254,6 @@
+ 
+ static int dsi_dcs_bl_get_brightness(struct backlight_device *bl)
+ {
+-	struct mipi_dsi_device *dsi = bl_get_data(bl);
+-	int ret;
+ 	u16 brightness = bl->props.brightness;
+ 
+ 	// FIXME kernel oops when getting brightness via DCS
+@@ -266,7 +264,6 @@
+ {
+ 	struct jdi_panel *jdi = bl_get_data(bl);
+ 	struct mipi_dsi_device *dsi = jdi->dsi;
+-	int ret;
+ 
+ 	dsi->mode_flags &= ~MIPI_DSI_MODE_LPM;
+ 

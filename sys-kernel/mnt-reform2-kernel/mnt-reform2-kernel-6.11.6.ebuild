@@ -61,13 +61,10 @@ src_prepare() {
         local PATCHES=(
                 # meh, genpatches have no directory
                 "${WORKDIR}"/*.patch
-				# etnaviv
-                "${WORKDIR}"/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/patches${PV%.*}/etnaviv/*.patch
                 # Patches for the i.MX8MPlus
                 "${WORKDIR}"/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/patches${PV%.*}/imx8mp-mnt-reform2/*.patch
                 # Patches for the i.MX8MPlus pocket reform
                 "${WORKDIR}"/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/patches${PV%.*}/imx8mp-mnt-pocket-reform/*/*.patch
-                "${FILESDIR}"/*.patch
                 # Patches for the i.MX8MQ
                 "${WORKDIR}"/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/patches${PV%.*}/imx8mq-mnt-reform2/*.patch
                 # Patches for the LS1028A

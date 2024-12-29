@@ -14,7 +14,7 @@ GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 3 ))
 # forked to https://github.com/projg2/fedora-kernel-config-for-gentoo
 CONFIG_VER=6.12.5-gentoo
 GENTOO_CONFIG_VER=g14
-REFORM_CONFIG_HASH=32e4939b9d412b863a10e9a7e394b7a84a63d312
+REFORM_CONFIG_HASH=dec868a44ed4e3cef5bf82edb4fa77885fb846ed
 
 DESCRIPTION="Linux kernel built with Gentoo patches and patches for the MNT Reform 2 laptop."
 HOMEPAGE="

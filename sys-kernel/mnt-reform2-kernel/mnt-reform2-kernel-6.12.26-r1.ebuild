@@ -93,9 +93,7 @@ src_prepare() {
         esac
 
         # Device tree for i.MX8MQ
-        mv ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/freescale/imx8mq-mnt-reform2.dts{,.orig}
-        cp ${WORKDIR}/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/imx8mq-mnt-reform2.dts ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/freescale/imx8mq-mnt-reform2.dts
-        # There is already a device tree for the mnt reform upstream. We are replacing it. No need to modify the Makefile.
+        # There is already a device tree for the mnt reform upstream. The necessary patches are applied automatically. No need for further action here.
         cp ${WORKDIR}/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/imx8mq-mnt-reform2-hdmi.dts ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/freescale/imx8mq-mnt-reform2-hdmi.dts
         sed --in-place --expression='/imx8mq-mnt-reform2.dtb/a dtb-$(CONFIG_ARCH_MXC) += imx8mq-mnt-reform2-hdmi.dtb' ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/freescale/Makefile
 
@@ -112,8 +110,7 @@ src_prepare() {
         sed --in-place --expression='/fsl-ls1028a-rdb.dtb/a dtb-$(CONFIG_ARCH_LAYERSCAPE) += fsl-ls1028a-mnt-reform2.dtb' ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/freescale/Makefile
 
         # Device tree for the Bananapi cm4
-        cp ${WORKDIR}/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/meson-g12b-bananapi-cm4-mnt-reform2.dts ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/amlogic/meson-g12b-bananapi-cm4-mnt-reform2.dts
-        # There is already a device tree for the mnt reform upstream. We are replacing it. No need to modify the Makefile.
+        # There is already a device tree for the mnt reform upstream. The necessary patches are applied automatically. No need for further action here.
 
         # Device tree for the Bananapi cm4 pocket reform
         cp ${WORKDIR}/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/meson-g12b-bananapi-cm4-mnt-pocket-reform.dts ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/amlogic/meson-g12b-bananapi-cm4-mnt-pocket-reform.dts

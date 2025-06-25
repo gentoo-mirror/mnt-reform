@@ -116,15 +116,11 @@ src_prepare() {
         cp ${WORKDIR}/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/meson-g12b-bananapi-cm4-mnt-pocket-reform.dts ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/amlogic/meson-g12b-bananapi-cm4-mnt-pocket-reform.dts
         sed --in-place --expression='/meson-g12b-bananapi-cm4-mnt-reform2.dtb/a dtb-$(CONFIG_ARCH_MESON) += meson-g12b-bananapi-cm4-mnt-pocket-reform.dtb' ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/amlogic/Makefile
 
-        # Device tree for the rk3588
-        cp ${WORKDIR}/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/rk3588-mnt-reform2.dts ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/rockchip/rk3588-mnt-reform2.dts
-        sed --in-place --expression='/rk3588-rock-5b.dtb/a dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588-mnt-reform2.dtb' ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/rockchip/Makefile
-
         # Device tree for the rk3588 pocket reform
         cp ${WORKDIR}/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/rk3588-mnt-pocket-reform.dts ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/rockchip/rk3588-mnt-pocket-reform.dts
         sed --in-place --expression='/rk3588-mnt-reform2.dtb/a dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588-mnt-pocket-reform.dtb' ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/rockchip/Makefile
 
-        # Device tree for the rk3588 reform2 dsi (whatever that is)
+        # Device tree for the rk3588 reform2 dsi
         cp ${WORKDIR}/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/rk3588-mnt-reform2-dsi.dts ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/rockchip/rk3588-mnt-reform2-dsi.dts
         sed --in-place --expression='/rk3588-mnt-pocket-reform.dtb/a dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588-mnt-reform2-dsi.dtb' ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/rockchip/Makefile
 

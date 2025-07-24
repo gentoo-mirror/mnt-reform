@@ -9,13 +9,13 @@ KERNEL_IUSE_MODULES_SIGN=1
 inherit kernel-build toolchain-funcs verify-sig
 
 MY_P=linux-${PV%.*}
-PATCHSET=linux-gentoo-patches-6.15.5
+PATCHSET=linux-gentoo-patches-6.15.8
 # https://koji.fedoraproject.org/koji/packageinfo?packageID=8
 # forked to https://github.com/projg2/fedora-kernel-config-for-gentoo
 CONFIG_VER=6.15.6-gentoo
 GENTOO_CONFIG_VER=g16
-SHA256SUM_DATE=20250717
-REFORM_CONFIG_HASH=5880f16ee09fac4f55c92611d89869e2844b36b4
+SHA256SUM_DATE=20250724
+REFORM_CONFIG_HASH=19660fa2a05476f345480af881ae0c0dc052428d
 
 DESCRIPTION="Linux kernel built with Gentoo patches and patches for the MNT Reform 2 laptop."
 HOMEPAGE="
@@ -159,6 +159,10 @@ src_prepare() {
     # Device tree for the Bananapi cm4 pocket reform
     cp ${WORKDIR}/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/meson-g12b-bananapi-cm4-mnt-pocket-reform.dts ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/amlogic/meson-g12b-bananapi-cm4-mnt-pocket-reform.dts
     sed --in-place --expression='/meson-g12b-bananapi-cm4-mnt-reform2.dtb/a dtb-$(CONFIG_ARCH_MESON) += meson-g12b-bananapi-cm4-mnt-pocket-reform.dtb' ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/amlogic/Makefile
+
+	# Device tree for the rk3588 mnt reform 2
+	# Since it is now shipped with the vanila kernel, so we don't need to make an entry in the Makefile, just override the vanilla dts.
+    cp ${WORKDIR}/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/rk3588-mnt-reform2.dts  ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/rockchip/rk3588-mnt-reform2.dts 
 
     # Device tree for the rk3588 pocket reform
     cp ${WORKDIR}/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/rk3588-mnt-pocket-reform.dts ${WORKDIR}/${MY_P}/arch/arm64/boot/dts/rockchip/rk3588-mnt-pocket-reform.dts

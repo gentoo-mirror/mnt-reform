@@ -33,5 +33,5 @@ src_compile() {
 
 	export KERNEL_DIR="${KERNEL_DIR:-${ROOT}/usr/src/linux}"
 
-	linux-mod-r1_src_compil_e
+	linux-mod-r1_src_compile
 }

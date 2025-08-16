@@ -97,6 +97,7 @@ src_prepare() {
 	# Delete obsolte patch(es) - they've been merged into upstream...
 	rm --force "${WORKDIR}"/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/patches${PV%.*}/rk3588-mnt-reform2/0001-MERGED-drm-connector-hdmi-Evaluate-limited-range-aft.patch
 	rm --force "${WORKDIR}"/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/patches${PV%.*}/rk3588-mnt-reform2/0039-MERGED-arm64-dts-rockchip-improve-PHY-handling-for-R.patch
+	rm --force "${WORKDIR}"/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/patches${PV%.*}/rk3588-mnt-reform2/0102-drm-rockchip-vop2-fail-cleanly-if-missing-a-primary-.patch
 
     # Patches for the i.MX8MPlus
     for patch in  "${WORKDIR}"/reform-debian-packages-${REFORM_CONFIG_HASH}/linux/patches${PV%.*}/imx8mp-mnt-reform2/*.patch; do

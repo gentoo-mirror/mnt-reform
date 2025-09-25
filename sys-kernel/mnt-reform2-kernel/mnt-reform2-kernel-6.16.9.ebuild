@@ -10,12 +10,12 @@ inherit kernel-build toolchain-funcs verify-sig
 
 BASE_P=linux-${PV%.*}
 PATCH_PV=${PV%_p*}
-PATCHSET=linux-gentoo-patches-6.16.6
+PATCHSET=linux-gentoo-patches-6.16.8
 # https://koji.fedoraproject.org/koji/packageinfo?packageID=8
 # forked to https://github.com/projg2/fedora-kernel-config-for-gentoo
 CONFIG_VER=6.16.2-gentoo
 GENTOO_CONFIG_VER=g17
-SHA256SUM_DATE=20250911
+SHA256SUM_DATE=20250925
 REFORM_CONFIG_HASH=830c94db42beef876dc58ea56711659ae7bd415d
 
 DESCRIPTION="Linux kernel built with Gentoo patches and patches for the MNT Reform 2 laptop."

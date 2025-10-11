@@ -16,7 +16,7 @@ PATCHSET=linux-gentoo-patches-6.17.1
 CONFIG_VER=6.17.0-gentoo
 GENTOO_CONFIG_VER=g17
 SHA256SUM_DATE=20251006
-REFORM_CONFIG_HASH=d3b4b9dbdd779e8e6c5c297679743b96e36a8b99
+REFORM_CONFIG_HASH=f85c027c93e7869b8d6065babc7852debdba5c02
 
 DESCRIPTION="Linux kernel built with Gentoo patches and patches for the MNT Reform 2 laptop."
 HOMEPAGE="
